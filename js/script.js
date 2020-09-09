@@ -43,9 +43,9 @@ $(document).ready(function(){
 
         var idItem = $(this).parent('.icon').parent('.item').data('id');
 
-        $('.item[data-id="' + idItem + '"]').find('h3').hide();
+        $('.item[data-id="' + idItem + '"]').find('h3').toggleClass('hide');
 
-        $('.item[data-id="' + idItem + '"]').find('input').show();
+        $('.item[data-id="' + idItem + '"]').find('input').toggleClass('show','hide');
 
     });
 

@@ -87,6 +87,10 @@ body {
     box-shadow:0 0 14px #377fff;
 }
 
+.item input[type="text"] {
+    display: none;
+}
+
 .item i {
     cursor: pointer;
     transition: 1s ease-in-out;
@@ -102,7 +106,7 @@ body {
 
 /* CSS SECONDARY */
 
-.show {
+.item input[type="text"].show {
     display: block;
 }
 
