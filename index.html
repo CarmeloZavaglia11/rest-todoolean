@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- HANDLEBARS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="input">
+    <input type="text" name="" id="">
+    <button type="button">INSERISCI</button>
+  </div>
+
+  <div class="container">
+  
+  </div>
+
+  <!-- TEMPLATE HANDLEBARS -->
+
+    <script id="template" type="text/x-handlebars-template">
+      <div class="item" data-id="{{id}}">
+          <h3>{{item}}</h3>
+          <input class="hide" type="text" name="" id="">
+        <div class="icon">
+          <i class="fas fa-trash-alt delete"></i>
+          <i class="fas fa-cog modify"></i>
+        </div>
+      </div>
+    </script>
+
+  
+  <!-- SCRIPT -->
+        
+    <script src="js/script.js"></script>
+</body>
+</html>

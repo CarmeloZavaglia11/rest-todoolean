@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #5433FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+}
+
+.input {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.input input,
+.item input {
+    border: 1px solid blue;
+    padding: 5px 5px;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+}
+
+.input input:focus,
+.item input:focus {
+    transform: scale(1.1);
+    border: 2px solid lightblue;
+}
+
+.input button {
+    border: 0;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.input button:hover {
+    transform: scale(1.05);
+    background-color: rgba(0,0,255,0.6);
+}
+
+.container {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 80vh;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.item {
+    color: white;
+    width: 80%;
+    height: calc(100% / 10);
+    background-color: #503dff;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.01);
+    box-shadow:0 0 14px #377fff;
+}
+
+.item i {
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.item i:hover:not(.delete) {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.icon {
+    margin: 10px;
+}
+
+/* CSS SECONDARY */
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
