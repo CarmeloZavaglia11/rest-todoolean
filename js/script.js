@@ -69,13 +69,13 @@ $(document).ready(function(){
 
 function printList() {
 
-    empty();
-
     $.ajax(
         {
             url: 'http://157.230.17.132:3034/todos',
             methos: 'GET',
             success: function(data) {
+
+                empty();
 
                 var source = $('#template').html();
                 var template = Handlebars.compile(source);
@@ -157,16 +157,17 @@ function modifyItem(id) {
 
                 printList();
 
+                $('.item[data-id="' + id + '"]').find('h3').show();
+
+                $('.item[data-id="' + id + '"]').find('input').hide();
+
+
             },
             error: function() {
                 alert('error');
             }
         }
     );
-
-    $('.item[data-id="' + id + '"]').find('h3').show();
-
-    $('.item[data-id="' + id + '"]').find('input').hide();
 
 }
 
