@@ -9,14 +9,25 @@ $(document).ready(function(){
     printList();
 
     $('.input button').click(function() {
+
         var valore = $('.input input').val();
-        addItem(valore);
+
+        if (valore == '') {
+            return;
+        }  else {
+            addItem(valore);    
+        }
+    
     })
 
     $('.input input').keydown(function (e) { 
         if(e.which == 13 || e.keycode == 13) {
             var valore = $('.input input').val();
-            addItem(valore);
+            if (valore == '') {
+                return;
+            }  else {
+                addItem(valore);    
+            }
         }
     });
 
